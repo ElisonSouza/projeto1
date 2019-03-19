@@ -12,9 +12,18 @@ public class User {
 	private Long id;
 	private String name;
 	private String email;
-	
+
 	@ManyToMany
 	private Set<Role> roles;
+
+	public User() {
+	}
+
+	public User(String name, String email) {
+		super();
+		this.name = name;
+		this.email = email;
+	}
 
 	public Long getId() {
 		return id;
